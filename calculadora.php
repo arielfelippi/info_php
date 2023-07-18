@@ -38,3 +38,5 @@ echo date('Y-m-d H:i:s'); // 2023-07-11 20:19:50.
 // PHP_EOL "/n/t/r" (End Of Line) enter
 echo "aviao /n/t/r";
 echo "aviao " . PHP_EOL;
+
+
