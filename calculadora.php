@@ -19,9 +19,8 @@ if ($value == $price || $value2 === $price) {
 }
 else if  ($value == ($price - 1) || $value2 === ($price - 1)) {
     // compra um suco
-} else {
-    // compra agua
 }
+
 
 echo date('d/m/Y'); // 11/07/2023 11-07-2023.
 echo date('Y-m-d'); // 2023-07-11. 
