@@ -1,42 +1,52 @@
 <?php
-//  + - * /
-$value = '2';
-$value2 = "02";
-$operador = '+';
+/* 
+ * (+) Adição
+ * (-) Subtração
+ * (*) Multiplicação
+ * (/) Divisão
+ * (pot) Potenciação
+ * (numPar)(% = modulo) Numero par
+ * (perc) Percentual(Desconto)
+ * (perc+) Percentual(Acrescimo)
+ * (ma) Media aritmetica
+*/
+
+$value = 100;
+$value2 = 10;
+$operador = 'perc';
 $resultado = 0 ; 
-$resultado = $value / $value2 ;
-echo $resultado; // 1
-
-// Garbage colector
-$resultado; //4456454445 LIXO
-
-$price =  (float) "{$price}"; // "123.45"
-
-// 123 OU 1234 == 123
-// 123 OU 1234 == 123
-if ($value == $price || $value2 === $price) {
-  // café
-}
-else if  ($value == ($price - 1) || $value2 === ($price - 1)) {
-    // compra um suco
-} else {
-    // compra agua
-}
-
-echo date('d/m/Y'); // 11/07/2023 11-07-2023.
-echo date('Y-m-d'); // 2023-07-11. 
-
-// usuario
-echo date('d/m/Y'); // 11/07/2023 11-07-2023.
-echo date('d/m/Y H:i:s'); // 11/07/2023 20:19:50
-// BD | DB
-echo date('Y-m-d'); // 2023-07-11. 
-echo date('Y-m-d H:i:s'); // 2023-07-11 20:19:50. 
 
 
-// <br> enter
-// PHP_EOL "/n/t/r" (End Of Line) enter
-echo "aviao /n/t/r";
-echo "aviao " . PHP_EOL;
+if ($operador == 'perc'){
+  $desconto = ($value * $value2) / 100;
+  $resultado = $value - $desconto; 
+} 
+
+if ($operador == 'perc+'){
+  $acrescimo = ($value * $value2) / 100;
+  $resultado = $value - $acrescimo; 
+} 
+
+if ($operador == 'ma'){ // 100 + 10  /2 = 55
+  $resultado = ($value + $value2) / 2;
+} 
+
+if ($operador == 'numPar') {
+  $restoDivisao = $value % 2; // 0 || 1...
+  $restoDivisao2 = $value2 % 2;
+
+  if ($restoDivisao == 0 && $restoDivisao2 == 0) {
+    $saoPares = true;
+  } else {
+    $saoPares = false;
+  }
+  $saoPares = ($restoDivisao == 0 && $restoDivisao2 == 0);
 
 
+  if($saoPares) {
+    echo "Os valores informados são pares.";
+  }
+} 
+
+
+echo "O valor é: {$resultado}";
