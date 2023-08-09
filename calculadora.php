@@ -49,4 +49,54 @@ if ($operador == 'numPar') {
 } 
 
 
-echo "O valor é: {$resultado}";
+// echo "O valor é: {$resultado}";
+
+for ($i = 0; $i < 10; $i++) {
+  // echo "O valor do i é: {$i}<br>";
+}
+
+$i = 11;
+while ($i < 10) {
+  echo "WHILE: O valor do i é: {$i}<br>";
+  $i++;
+}
+
+$i = 11;
+do {
+  echo "DO WHILE: O valor do i é: {$i}<br>";
+  $i++;
+} while ($i < 10);
+
+/**
+ * Média Harmonica
+ * 
+ * Média Ponderada
+ * $media = 6
+ * $prova = 4.8
+ * $peso = 5
+ * $prova2 = 1.5
+ * $peso2 = 3
+ * $prova3 = 2
+ * $peso3 = 2
+ * $numerador = ($prova * $peso) + ($prova2 * $peso2) + ($prova3 * $peso3);
+ * $denominador = ($peso + $peso2 + $peso3);
+ * $MP = $numerador / $denominador;
+ */
+
+ $media = 6;
+
+ $prova = 4.8;
+ $peso = 5;
+ $prova2 = 1.5;
+ $peso2 = 3;
+ $prova3 = 2;
+ $peso3 = 2;
+ $numerador = ($prova * $peso) + ($prova2 * $peso2) + ($prova3 * $peso3);
+ $denominador = ($peso + $peso2 + $peso3);
+ $MP = $numerador / $denominador;
+
+if ($MP >= $media) {
+ // aprovado
+} else {
+  // reprovado
+}
