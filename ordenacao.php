@@ -116,10 +116,20 @@ foreach ($newFrutas as $fruta => $quantidade) {
     maca => 3
 */
 
+function ordenacao(array $frutas, string $ordem) {
 
+    if ($ordem == "asc") {
+        
+    } else {
 
+    }
 
+    return $frutas;
+}
 
+$ordem = "asc";
+$frutas = ordenacao($newFrutas, $ordem);
 
-
-
+foreach ($newFrutas as $fruta => $quantidade) {
+    echo "fruta {$fruta}: {$quantidade} <br>";
+}
