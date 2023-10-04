@@ -91,15 +91,35 @@ $frutas = [
 // Dica: in_array(), array_merge(), isset(), array_push()
 
 $newFrutas = [];
+
 for($i = 0; $i < count($frutas); $i++) {
     $frutaAtual = $frutas[$i]; // maca
 
     if (!isset($newFrutas[$frutaAtual])) {
         $newFrutas[$frutaAtual] = 1; // [maca => 1]
     } else {
-        $newFrutas[$frutaAtual] += 1; // [maca => 3]
+        $newFrutas[$frutaAtual] += 1; // [maca => 3, uva => 1]
     }
 }
 
-echo implode(",", $newFrutas);
+foreach ($newFrutas as $fruta => $quantidade) {
+    echo "fruta {$fruta}: {$quantidade} <br>";
+}
+
+// Utilizar o mesmo exercicio e criar uma funcao ORDENACAO que recebe
+// dois parametros (array, string) para ordenar o array de frutas(1º param)
+// em ordem  crescente(ASC) ou decrescente(DESC)
+// Dica: sort, usort, asort, ksort, rsort... devem ser utilizados dentro
+// da funcao ORDENACAO
+/*
+    uva => 1
+    maca => 3
+*/
+
+
+
+
+
+
+
 
