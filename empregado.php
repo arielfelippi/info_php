@@ -16,7 +16,7 @@ class Estagiario implements Remuneravel {
 
     public function remuneracao() {
         // $this->salario = $this->salario * 2;
-        echo $this->salario *= 2;
+        $this->salario *= 2;
     }
 }
 
@@ -27,5 +27,17 @@ class FolhaDePagamento {
         $this->funcionario = $funcionario;
         $this->funcionario->remuneracao();
     }
+
+    public function __toString() {
+        return "O salário é: {$this->funcionario->salario}<br>";
+    }
 }
+
+$estagiario = new Estagiario();
+
+
+$folha = new FolhaDePagamento();
+$folha->pagar($estagiario);
+echo $folha;
+
 
