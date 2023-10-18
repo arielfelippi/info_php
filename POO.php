@@ -61,6 +61,11 @@ class Pessoa {
     public function falar() {}
 
     public function __toString() {
+        
+        if(true) {
+
+        }
+
         return $this;
     }
 
